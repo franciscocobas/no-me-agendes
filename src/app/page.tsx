@@ -16,11 +16,17 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      <h1 className=" text-xl font-bold ">No me agendes</h1>
-      <p className=" w-96 text-center ">Aplicación para mandar mensajes de WhatsApp sin agendar contactos.</p>
-      <p className=" w-96 text-center ">Escribí un número uruguayo y apretá Enviar, se abrirá whatsapp para escribirle a ese número.</p>
-      <p className='mt-3'>Hacer click <button className="underline" onClick={() => setInternationalTel(!isInternationalTel)}>acá</button> si tengo un número {isInternationalTel ? "de Uruguay" : "internacional"}.</p>
+    <main className="flex min-h-screen flex-col items-center py-24 px-5">
+      <h1 className="text-xl font-bold mb-3">No me agendes</h1>
+      <p className="mb-3">Aplicación para mandar mensajes de WhatsApp sin agendar contactos.</p>
+      {
+        !isInternationalTel ? (
+          <p className="">Escribí un número uruguayo y apretá Enviar, se abrirá whatsapp para escribirle a ese número.</p>
+        ) : (
+          <p className="">Escribí un número internacional completo (incluido el símbolo de +) y apretá Enviar, se abrirá whatsapp para escribirle a ese número.</p>
+        )
+      }
+      <p className='mt-3 text-'>Hacer click <button className="underline" onClick={() => setInternationalTel(!isInternationalTel)}>acá</button> si tengo un número {isInternationalTel ? "de Uruguay" : "internacional"}.</p>
       <form onSubmit={openWhatsapp} className="flex flex-col mt-4">
         <input className="border border-sky-500 text-gray-900 px-2 py-1 rounded-sm" type="tel" name="tel" id="" value={tel} onChange={(e) => {
         setTel(e.target.value)
