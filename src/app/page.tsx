@@ -16,8 +16,8 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center py-24 px-5">
-      <h1 className="text-xl font-bold mb-3">No me agendes</h1>
+    <main className="flex min-h-screen flex-col py-24 px-5 max-w-prose mx-auto">
+      <h1 className="text-xl font-bold mb-3 text-center">No me agendes</h1>
       <p className="mb-3">Aplicación para mandar mensajes de WhatsApp sin agendar contactos.</p>
       {
         !isInternationalTel ? (
