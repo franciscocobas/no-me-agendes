@@ -27,7 +27,7 @@ export default function Home() {
         )
       }
       <p className='mt-3 text-'>Hacer click <button className="underline" onClick={() => setInternationalTel(!isInternationalTel)}>acá</button> si tengo un número {isInternationalTel ? "de Uruguay" : "internacional"}.</p>
-      <form onSubmit={openWhatsapp} className="flex flex-col mt-4">
+      <form onSubmit={openWhatsapp} className="flex flex-col mt-4 md:max-w-72 md:mx-auto">
         <input className="border border-sky-500 text-gray-900 px-2 py-1 rounded-sm" type="tel" name="tel" id="" value={tel} onChange={(e) => {
         setTel(e.target.value)
         }} placeholder={ isInternationalTel ? "+54 9 3887 40-0837" : "099 123 123" } />
