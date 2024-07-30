@@ -5,9 +5,9 @@ import {  FormEvent, useRef, useState } from "react"
 export default function Home() {
   const [tel, setTel] = useState<string>("");
   const [isInternationalTel, setInternationalTel] = useState<boolean>(false);
-  const inputEle = useRef<any>(null);
+  const inputEle = useRef<HTMLInputElement>(null);
 
-  function openWhatsapp(e: any) {
+  function openWhatsapp(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (isInternationalTel) {
       window.open(`https://wa.me/${tel.replaceAll(" ", "").replaceAll("-", "")}`, "_blank");
