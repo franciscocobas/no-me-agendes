@@ -37,7 +37,7 @@ export default function Home() {
       </p>
       <form
         onSubmit={openWhatsapp}
-        className="flex flex-col mt-4 md:max-w-72 md:mx-auto">
+        className="flex flex-col mt-4 md:max-w-72 md:mx-auto w-full">
         {IntlTelInput ? (
           <IntlTelInput
             ref={inputEle}
@@ -47,7 +47,7 @@ export default function Home() {
               initialCountry: "uy",
               autoPlaceholder: "aggressive",
               containerClass:
-                "[&>input]:border [&>input]:border-sky-500 [&>input]:text-gray-900 [&>input]:px-2 [&>input]:py-1 [&>input]:rounded-sm [&>div>div>input]:px-3 [&>div>div>input]:py-1",
+                "[&>input]:border [&>input]:border-sky-500 [&>input]:text-gray-900 [&>input]:px-2 [&>input]:py-1 [&>input]:rounded-sm [&>input]:w-full [&>div>div>input]:px-3 [&>div>div>input]:py-1",
             }}
           />
         ) : (
