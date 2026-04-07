@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-6FSR2JCZ7P"></Script>
